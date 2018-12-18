@@ -1,7 +1,6 @@
 package main
 
 import "fmt"
-
 func main() {
 	lst := []float64{1, 2, 3, 4, 5}
 	avge := avg(lst)

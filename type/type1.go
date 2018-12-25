@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Vuong struct {
 	length, width int
@@ -8,6 +10,7 @@ type Vuong struct {
 
 type VuongWithHeight struct {
 	Vuong
+	//Rect
 	height int
 }
 
@@ -21,18 +24,18 @@ func (r Vuong) perim() int {
 	return (r.length + r.width) * 2
 }
 
-func (r VuongWithHeight) sum() int{
+func (r VuongWithHeight) sum() int {
 	fmt.Println("VuongWithHeight sum")
-	return r.length + r.width + r.height
+	return r.width + r.width + r.height
 }
 
-func (r VuongWithHeight) area() int{
+func (r VuongWithHeight) area() int {
 	fmt.Println("VuongWithHeight area")
 	return r.length + r.width + r.height
 }
 
 func main() {
-	ra := VuongWithHeight{Vuong{2,3}, 5}
+	ra := VuongWithHeight{Vuong{2, 3}, 5}
 	fmt.Printf("area: %d \n", ra.area())
 	fmt.Printf("perim: %d \n", ra.perim())
 	fmt.Printf("perim: %d \n", ra.sum())

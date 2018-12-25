@@ -12,14 +12,22 @@ type VuongWithHeight struct {
 }
 
 func (r Vuong) area() int {
+	fmt.Println("Vuong area")
 	return r.length * r.width
 }
 
 func (r Vuong) perim() int {
+	fmt.Println("Vuong perim")
 	return (r.length + r.width) * 2
 }
 
 func (r VuongWithHeight) sum() int{
+	fmt.Println("VuongWithHeight sum")
+	return r.length + r.width + r.height
+}
+
+func (r VuongWithHeight) area() int{
+	fmt.Println("VuongWithHeight area")
 	return r.length + r.width + r.height
 }
 

@@ -10,6 +10,7 @@ import (
 var wg sync.WaitGroup
 
 func init() {
+	fmt.Println("init")
 	rand.Seed(time.Now().UnixNano())
 }
 

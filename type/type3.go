@@ -22,4 +22,14 @@ func main(){
 	var t int
 	fmt.Println(t) //0
 	fmt.Println(&t) //0xc000014080
+
+	fmt.Println("-------------")
+	pz := new(int)
+	fmt.Println(pz)
+	fmt.Println(*pz)
+	fmt.Println(&pz)
+	*pz = 2
+	fmt.Println(pz)
+	fmt.Println(*pz)
+	fmt.Println(&pz)
 }

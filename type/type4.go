@@ -1,10 +1,10 @@
 package main
 
-type Celsius int64
+import "fmt"
 
-type Fahrenheit int64
+type Celsius float64
 
-var axx int32
+type Fahrenheit float64
 
 const (
 	AbsoluteZeroC Celsius = -273.15
@@ -19,6 +19,10 @@ func FToC(f Fahrenheit) Celsius {
 	return Celsius((f - 32) * 5 / 9)
 }
 
-//func (f axx) add{
-//	return axx + 1
-//}
+func main(){
+	as := CToF(100)
+	fmt.Println(as)
+
+	asx := FToC(100)
+	fmt.Println(asx)
+}

@@ -13,13 +13,14 @@ const (
 )
 
 func CToF(c Celsius) Fahrenheit {
+	//aw := Fahrenheit(9/5)
 	return Fahrenheit(c*9/5 + 32)
 }
 func FToC(f Fahrenheit) Celsius {
 	return Celsius((f - 32) * 5 / 9)
 }
 
-func main(){
+func main() {
 	as := CToF(100)
 	fmt.Println(as)
 

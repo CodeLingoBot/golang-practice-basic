@@ -15,11 +15,11 @@ type Square struct {
 	side int
 }
 
-func (r Rect) area() int {
+func (r *Rect) area() int {
 	return r.length * r.width
 }
 
-func (r Rect) perim() int {
+func (r *Rect) perim() int {
 	return (r.length + r.width) * 2
 }
 

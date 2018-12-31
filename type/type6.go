@@ -32,7 +32,7 @@ func main(){
 	}
 	fmt.Printf("%s\n", data)
 	fmt.Println("-------------------")
-	var titles []struct{ Title string }
+	var titles []struct{ Actors []string }
 	if err := json.Unmarshal(data, &titles); err != nil {
 		log.Fatalf("JSON unmarshaling failed: %s", err)
 	}

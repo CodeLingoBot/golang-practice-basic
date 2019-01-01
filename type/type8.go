@@ -42,10 +42,17 @@ func main(){
 
 	testInterface(c)
 	testInterface(p)
-
+    //Method values are useful when packages API calls for a function value,
+    // and the client’s desired behavior for that function is to call a method on a specific receiver.
 	t:= p.TestParent1 // method value
 	fmt.Println(t(9))
 
+	//Method expressions can be helpful when you need a value to represent
+	// a choice among several methods belonging to the same type
+	// so that you can call i the chosen method with many different receivers
 	y := Parent.TestParent1 // method expression
 	fmt.Println(y(p, 100))
+
+	u := (*Parent).TestParent1
+	fmt.Println(u(&p, 1000))
 }

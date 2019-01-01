@@ -45,4 +45,7 @@ func main(){
 
 	t:= p.TestParent1 // method value
 	fmt.Println(t(9))
+
+	y := Parent.TestParent1 // method expression
+	fmt.Println(y(p, 100))
 }

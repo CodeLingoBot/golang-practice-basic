@@ -23,4 +23,6 @@ func main(){
 	//y2.print1()
 	y2.print2()
 	fmt.Println(*(y2))
+
+	newyear{year:2018}.print2()
 }

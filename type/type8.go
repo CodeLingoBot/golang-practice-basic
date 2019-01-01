@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type PInterface interface{
-	TestParent1(i int)
+	TestParent1(i int) int
 }
 
 type Parent struct {
@@ -23,9 +23,11 @@ func TestParent(p Parent){
 	fmt.Println(p.name)
 }
 
-func (p Parent) TestParent1(i int){
+func (p Parent) TestParent1(i int) int{
 	fmt.Println(i)
+	return i+1
 }
+
 
 func testInterface(pInterface PInterface){
 
@@ -40,4 +42,7 @@ func main(){
 
 	testInterface(c)
 	testInterface(p)
+
+	t:= p.TestParent1 // method value
+	fmt.Println(t(9))
 }

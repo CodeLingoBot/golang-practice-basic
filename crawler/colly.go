@@ -20,6 +20,13 @@ func main() {
 		fmt.Println(e.Attr("---------"))
 	})
 
+	c.OnHTML("div.tit.new > a", func(e *colly.HTMLElement) {
+		//e.Request.Visit(e.Attr("href"))
+		fmt.Println(e.Attr("title"))
+		fmt.Printf("%s%s", "https://comicvn.net", e.Attr("href"))
+		fmt.Println(e.Attr("---------"))
+	})
+
 	c.OnRequest(func(r *colly.Request) {
 		fmt.Println("Visiting", r.URL)
 	})

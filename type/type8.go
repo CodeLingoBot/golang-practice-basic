@@ -49,7 +49,7 @@ func main(){
 
 	//Method expressions can be helpful when you need a value to represent
 	// a choice among several methods belonging to the same type
-	// so that you can call i the chosen method with many different receivers
+	// so that you can call the chosen method with many different receivers
 	y := Parent.TestParent1 // method expression
 	fmt.Println(y(p, 100))
 

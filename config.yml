@@ -1,0 +1,16 @@
+version: '1'
+database:
+  host: xxx
+  port: xxx
+  name: database_name
+  user: xx
+  password: xxx
+redis:
+  host: xxx
+  port: xxx
+  name: database_name
+  user: xx
+  password: xxx
+domain:
+  host: xxx
+  port: xxx

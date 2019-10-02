@@ -8,13 +8,13 @@ import (
 )
 
 func main() {
-	from := mail.NewEmail("Example User", "zendragon93@gmail.com")
+	from := mail.NewEmail("Example User", "xx")
 	subject := "Sending with Twilio SendGrid is Fun"
-	to := mail.NewEmail("Example User", "khai.luong@tpptechnology.com")
+	to := mail.NewEmail("Example User", "xx")
 	plainTextContent := "and easy to do anywhere, even with Go"
 	htmlContent := "<strong>and easy to do anywhere, even with Go</strong>"
 	message := mail.NewSingleEmail(from, subject, to, plainTextContent, htmlContent)
-	client := sendgrid.NewSendClient("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")
+	client := sendgrid.NewSendClient("key")
 	response, err := client.Send(message)
 	if err != nil {
 		log.Println(err)

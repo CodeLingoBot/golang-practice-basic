@@ -1,3 +1,4 @@
+![alt text](https://i.imgur.com/33BLQZl.png)
 # Introducing Go Note
 
 # Type

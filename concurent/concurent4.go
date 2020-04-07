@@ -20,7 +20,7 @@ func main(){
 	fmt.Println(<-ch, <-ch, <-ch, <-ch, <-ch, <-ch, <-ch, <-ch, <-ch)
 }
 
-func push(num int, ch chan int){
+func push(num int, ch chan<- int){
 	msg := num
 	ch <- msg
 }

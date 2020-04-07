@@ -34,7 +34,7 @@ func main(){
 	wg.Wait()
 }
 
-func worker(task chan string, worker int){
+func worker(task <-chan string, worker int){
 	defer wg.Done()
 
 	for{
